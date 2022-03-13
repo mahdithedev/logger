@@ -1,5 +1,5 @@
 {
-  "name": "@pyle-of-mail/logger",
+  "name": "@pyle_of_mail/logger",
   "version": "1.0.0",
   "description": "Minimal and basic logger written in NodeJS for the Pyle of Mail project.",
   "main": "index.js",
