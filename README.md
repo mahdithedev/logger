@@ -1,4 +1,4 @@
-# `@pyle-of-mail/logger`
+# `@pyle_of_mail/logger`
 
 ## Description
 
@@ -9,7 +9,7 @@ Minimal and basic logger written in NodeJS.
 ### Installing the package
 
 ```bash
-npm install @pyle-of-mail/logger
+npm install @pyle_of_mail/logger
 ```
 
 ### Setting the log level
@@ -30,7 +30,7 @@ The logger class will print all your messages to the console by default.
 #### Importing the package
 
 ```node
-import { Logger } from "@pyle-of-mail/logger";
+import { Logger } from "@pyle_of_mail/logger";
 ```
 
 #### Logging error messages
