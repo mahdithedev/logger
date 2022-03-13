@@ -1,0 +1,35 @@
+{
+  "name": "@pyle-of-mail/logger",
+  "version": "1.0.0",
+  "description": "Minimal and basic logger written in NodeJS for the Pyle of Mail project.",
+  "main": "index.js",
+  "type": "module",
+  "author": "Mircea-Pavel Anton",
+  "license": "MIT",
+  "keywords": [
+    "logger",
+    "pyle-of-mail",
+    "utility"
+  ],
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "format": "prettier --write \"**/*.js\""
+  },
+  "homepage": "https://github.com/Pyle-of-Mail/logger#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pyle-of-Mail/logger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Pyle-of-Mail/logger/issues"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1"
+  }
+}
