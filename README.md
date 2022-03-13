@@ -22,14 +22,21 @@ npm install @pyle_of_mail/logger
 
 ### Setting the log level
 
+The log level is set as an environment variable called `LOG_LEVEL`.  
+You can set it, for example, in a `.env` file:
+
+```bash
+LOG_LEVEL = warn
+```
+
 There are 4 main types of log messages in this class:
 
-|  Type   |                                       Description                                        |                  Printed                   |
-| :-----: | :--------------------------------------------------------------------------------------: | :----------------------------------------: |
-|  error  |                Used to log problems that require code execution to stop.                 |                   Always                   |
-| warning |             Used to log problems that do not require code execution to stop.             | `LOG_LEVEL` in `["warn", "debug", "info"]` |
-|  info   | Used to print generic informational messages. Informs the user on the actions performed. |     `LOG_LEVEL` in `["debug", "info"]`     |
-|  vars   |  Used to print variables to the console. Mainly intended for development and debugging.  |         `LOG_LEVEL` in `["info"]`          |
+| Log Level |   Method   |                                       Description                                        |                  Printed                   |
+| :-------: | :--------: | :--------------------------------------------------------------------------------------: | :----------------------------------------: |
+|   error   | logError() |                Used to log problems that require code execution to stop.                 |                   Always                   |
+|   warn    | logWarn()  |             Used to log problems that do not require code execution to stop.             | `LOG_LEVEL` in `["warn", "debug", "info"]` |
+|   info    | logInfo()  | Used to print generic informational messages. Informs the user on the actions performed. |     `LOG_LEVEL` in `["debug", "info"]`     |
+|   debug   | logVars()  |  Used to print variables to the console. Mainly intended for development and debugging.  |         `LOG_LEVEL` in `["info"]`          |
 
 ### Logging to the console
 
