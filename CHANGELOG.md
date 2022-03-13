@@ -1,6 +1,6 @@
 # Changelog `@pyle_of_mail/logger`
 
-## [v1.0.2](https://github.com/Pyle-of-Mail/logger/releases/tag/v1.0.1) [13-03-2022]
+## [v1.0.2](https://github.com/Pyle-of-Mail/logger/releases/tag/v1.0.2) [13-03-2022]
 
 **🚀 New Features**:
 
