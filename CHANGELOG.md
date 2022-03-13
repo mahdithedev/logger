@@ -1,5 +1,19 @@
 # Changelog `@pyle_of_mail/logger`
 
+## [v1.0.2](https://github.com/Pyle-of-Mail/logger/releases/tag/v1.0.1) [13-03-2022]
+
+**🚀 New Features**:
+
+- Added `obfuscate()` method to hide sensitive data when logging.
+
+**🔧 Fixes**:
+
+- N/A
+
+**🌟 Improvements**:
+
+- N/A
+
 ## [v1.0.1](https://github.com/Pyle-of-Mail/logger/releases/tag/v1.0.1) [13-03-2022]
 
 **🚀 New Features**:

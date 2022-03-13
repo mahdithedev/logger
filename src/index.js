@@ -1,6 +1,13 @@
 import "dotenv/config";
 import "colors";
 
+export function obfuscate(string, prefix_length = 5) {
+  const prefix = string.substring(0, prefix_length);
+  const sufix = string.substring(prefix_length + 1).replace(/./g, "*");
+
+  return `${prefix}${sufix}`;
+}
+
 export class Logger {
   static log_level;
 

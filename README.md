@@ -8,6 +8,7 @@ Minimal and basic logger written in NodeJS.
 
 - [x] Logging to the console with log levels defined in env vars
 - [x] Color coded messages based on severity
+- [x] Option to obfuscate sensitive data when logging
 - [ ] Option to prefix all log messages by a timestamp
 - [ ] Logging to a file
 - [ ] Logging to an external log server
@@ -86,6 +87,20 @@ const response = some_function(some_param);
 
 // log the output
 Logger.logVar(response);
+```
+
+Say you want to obfuscate a variable when printing it to the console. It may be an access token or something. Say you want only the first `n` letters in clear and then you want it obfuscated. The `logger` package includes an `obfuscate()` method you can use:
+
+``` javascript
+const TOKEN = "my-super-secret-token";
+
+Logger.logVar(obfuscate(TOKEN, 5));
+```
+
+The above example will leave the first 5 characters in clear and then obfuscate the rest, producing:
+
+``` bash
+my-su**************
 ```
 
 ### Logging to a file
