@@ -1,3 +1,4 @@
+import "dotenv/config";
 import "colors";
 
 export class Logger {
@@ -18,7 +19,7 @@ export class Logger {
     // --------------------------------------------------------------------------------------------
     if (!Logger.log_level) Logger.init();
 
-    if (["info"].includes(Logger.log_level.toLowerCase())) {
+    if (["debug"].includes(Logger.log_level.toLowerCase())) {
       console.log(msg);
     }
   }

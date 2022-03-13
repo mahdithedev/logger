@@ -4,6 +4,14 @@
 
 Minimal and basic logger written in NodeJS.
 
+## Roadmap
+
+- [x] Logging to the console with log levels defined in env vars
+- [x] Color coded messages based on severity
+- [ ] Option to prefix all log messages by a timestamp
+- [ ] Logging to a file
+- [ ] Logging to an external log server
+
 ## Quickstart Guide
 
 ### Installing the package
@@ -76,6 +84,10 @@ Logger.logVar(response);
 ### Logging to a file
 
 Not yet supported, planned for release `1.1.0`.
+
+### Logging to a syslog server
+
+Not yet supported, planned for release `1.2.0`.
 
 ## License
 
