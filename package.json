@@ -16,7 +16,7 @@
     "dev": "nodemon src/index.js",
     "test": "node test/index.js",
     "test:mon": "nodemon test/index.js",
-    "format": "prettier --write \"**/*.js\"",
+    "format": "prettier --write \"**/*.js\";prettier --write \"**/*.md\";",
     "prepare": "husky install"
   },
   "homepage": "https://github.com/Pyle-of-Mail/logger#readme",
