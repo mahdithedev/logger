@@ -1,4 +1,4 @@
-import { Logger } from "../src/index.js";
+import * as Logger from "../src/index.js";
 
 Logger.logVar({
   msg: "this is a var message",

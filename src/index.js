@@ -1,6 +1,13 @@
+import * as fs from "fs";
 import "dotenv/config";
 import "colors";
 
+async function writeToFile(message) {
+  const LOG_FILE = process.env.LOG_FILE || null;
+  if (LOG_FILE) fs.writeFileSync(LOG_FILE, `${message}\n`, { flag: "a+" });
+}
+
+/** Obfuscate the given string starting from the given char position. **/
 export function obfuscate(string, prefix_length = 5) {
   const prefix = string.substring(0, prefix_length);
   const sufix = string.substring(prefix_length + 1).replace(/./g, "*");
@@ -8,76 +15,41 @@ export function obfuscate(string, prefix_length = 5) {
   return `${prefix}${sufix}`;
 }
 
-export class Logger {
-  static log_level;
+/** Prints the given `msg` if the `LOG_LEVEL` is "debug". **/
+export function logVar(msg) {
+  const LOG_LEVEL = process.env.LOG_LEVEL || "info";
 
-  /**
-   * Make sure the log level is set.
-   * If it is not defined in the env vars, the default value is "info",
-   * which will print everything but the `logVar()`.
-   */
-  static init() {
-    Logger.log_level = process.env.LOG_LEVEL || "info";
+  if (["debug"].includes(LOG_LEVEL.toLowerCase())) {
+    console.log(msg);
+    writeToFile(`DEBUG: ${msg}`);
   }
+}
 
-  static logVar(msg) {
-    // --------------------------------------------------------------------------------------------
-    // Make sure the logger is initialized.
-    // --------------------------------------------------------------------------------------------
-    if (!Logger.log_level) Logger.init();
+/** Prints the given `msg` if the `LOG_LEVEL` is "info" or higher. **/
+export function logInfo(msg) {
+  const LOG_LEVEL = process.env.LOG_LEVEL || "info";
+  const LOG_FILE = process.env.LOG_FILE || null;
 
-    if (["debug"].includes(Logger.log_level.toLowerCase())) {
-      console.log(msg);
-    }
+  if (["debug", "info"].includes(LOG_LEVEL.toLowerCase())) {
+    console.log(msg.green);
+    writeToFile(`INFO: ${msg}`);
   }
+}
 
-  static logInfo(msg) {
-    // --------------------------------------------------------------------------------------------
-    // Make sure the logger is initialized.
-    // --------------------------------------------------------------------------------------------
-    if (!Logger.log_level) Logger.init();
+/** Prints the given `msg` if the `LOG_LEVEL` is "warn" or higher. **/
+export function logWarn(msg) {
+  const LOG_LEVEL = process.env.LOG_LEVEL || "info";
+  const LOG_FILE = process.env.LOG_FILE || null;
 
-    if (["debug", "info"].includes(Logger.log_level.toLowerCase())) {
-      console.log(msg.green);
-    }
+  if (["warn", "debug", "info"].includes(LOG_LEVEL.toLowerCase())) {
+    console.log(msg.yellow);
+    writeToFile(`WARN: ${msg}`);
   }
+}
 
-  /**
-   * Prints the given @msg in red and throws an error.
-   * This will be executed regardless of the LOG_LEVEL set in env vars.
-   *
-   * @param msg: the message to be printed to the console.
-   */
-  static logWarn(msg) {
-    // --------------------------------------------------------------------------------------------
-    // Make sure the logger is initialized.
-    // --------------------------------------------------------------------------------------------
-    if (!Logger.log_level) Logger.init();
-
-    // --------------------------------------------------------------------------------------------
-    // Check the log level. If it's ok, print the message to the console and make it yellow.
-    // --------------------------------------------------------------------------------------------
-    if (["warn", "debug", "info"].includes(Logger.log_level.toLowerCase())) {
-      console.log(msg.yellow);
-    }
-  }
-
-  /**
-   * Prints the given @msg in red and throws an error.
-   * This will be executed regardless of the LOG_LEVEL set in env vars.
-   *
-   * @param msg: the message to be printed to the console.
-   */
-  static logError(msg) {
-    // --------------------------------------------------------------------------------------------
-    // Make sure the logger is initialized.
-    // --------------------------------------------------------------------------------------------
-    if (!Logger.log_level) Logger.init();
-
-    // --------------------------------------------------------------------------------------------
-    // Print the message to the console and throw a new error.
-    // --------------------------------------------------------------------------------------------
-    console.log(msg.red);
-    throw new Error(msg);
-  }
+/** Throws an error with the given @msg **/
+export function logError(msg) {
+  const LOG_FILE = process.env.LOG_FILE || null;
+  writeToFile(`ERROR: ${msg}`);
+  throw new Error(msg);
 }

@@ -23,11 +23,14 @@ npm install @pyle_of_mail/logger
 
 ### Setting the log level
 
-The log level is set as an environment variable called `LOG_LEVEL`.  
-You can set it, for example, in a `.env` file:
+The log level and log file path are set as an environment variable called `LOG_LEVEL` and `LOG_FILE` respectively.  
+You can set them, for example, in a `.env` file:
 
 ```bash
+# .env
+
 LOG_LEVEL = warn
+LOG_FILE = logger.log
 ```
 
 There are 4 main types of log messages in this class:
@@ -91,7 +94,7 @@ Logger.logVar(response);
 
 Say you want to obfuscate a variable when printing it to the console. It may be an access token or something. Say you want only the first `n` letters in clear and then you want it obfuscated. The `logger` package includes an `obfuscate()` method you can use:
 
-``` javascript
+```javascript
 const TOKEN = "my-super-secret-token";
 
 Logger.logVar(obfuscate(TOKEN, 5));
@@ -99,13 +102,13 @@ Logger.logVar(obfuscate(TOKEN, 5));
 
 The above example will leave the first 5 characters in clear and then obfuscate the rest, producing:
 
-``` bash
+```bash
 my-su**************
 ```
 
 ### Logging to a file
 
-Not yet supported, planned for release `1.1.0`.
+The logger will automatically log everything to a text file as well as to the console, as long as the `LOG_FILE` environment variable is defined.
 
 ### Logging to a syslog server
 
