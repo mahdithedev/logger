@@ -4,6 +4,10 @@
 
 Minimal and basic logger written in NodeJS.
 
+## Documentation
+
+See: https://pyle-of-mail.github.io/logger/
+
 ## Roadmap
 
 - [x] Logging to the console with log levels defined in env vars
