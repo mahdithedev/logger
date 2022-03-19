@@ -18,7 +18,7 @@ npm install @pyle_of_mail/logger
 ## Importing the package
 
 ```node
-import { Logger } from "@pyle_of_mail/logger";
+import * as Logger from "@pyle_of_mail/logger";
 ```
 
 ## Logging error messages
