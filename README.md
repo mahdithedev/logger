@@ -10,7 +10,7 @@ Minimal and basic logger written in NodeJS.
 - [x] Color coded messages based on severity
 - [x] Option to obfuscate sensitive data when logging
 - [ ] Option to prefix all log messages by a timestamp
-- [ ] Logging to a file
+- [x] Logging to a file
 - [ ] Logging to an external log server
 
 ## Quickstart Guide
