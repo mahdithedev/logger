@@ -9,28 +9,19 @@ Minimal and basic logger written in NodeJS.
 - [x] Logging to the console with log levels defined in env vars
 - [x] Color coded messages based on severity
 - [x] Option to obfuscate sensitive data when logging
-- [ ] Option to prefix all log messages by a timestamp
+- [x] Option to prefix all log messages by a timestamp
 - [x] Logging to a file
 - [ ] Logging to an external log server
 
-## Quickstart Guide
-
-### Installing the package
-
-```bash
-npm install @pyle_of_mail/logger
-```
+## Configuring the Logger
 
 ### Setting the log level
 
-The log level and log file path are set as an environment variable called `LOG_LEVEL` and `LOG_FILE` respectively.  
-You can set them, for example, in a `.env` file:
+The log level and is set as an environment variable called `LOG_LEVEL`.
 
 ```bash
 # .env
-
 LOG_LEVEL = warn
-LOG_FILE = logger.log
 ```
 
 There are 4 main types of log messages in this class:
@@ -45,6 +36,45 @@ There are 4 main types of log messages in this class:
 ### Logging to the console
 
 The logger class will print all your messages to the console by default.
+
+### Logging to a file
+
+The logger will automatically log everything to a text file as well as to the console, as long as the `LOG_FILE` environment variable is defined.
+
+```bash
+# .env
+LOG_FILE = /var/log/pyle-of-mail.log
+```
+
+### Logging to a syslog server
+
+### Adding a timestamp before each log message
+
+By defining the `TIMESTAMP` environment variable, the logger will automatically log the messages in the `[{timestamp}] {message}` fomrmat.
+
+The `TIMESTAMP` variable has 3 options:
+
+- `TIMESTAMP = millis`
+
+![Milliseconds timestamp](res/millis.png)
+
+- `TIMESTAMP = date`
+
+![Date timestamp](res/date.png)
+
+- Undefined or set to any other value
+
+![No timestamp](res/undefined.png)
+
+Not yet supported, planned for release `1.3.0`.
+
+## Quickstart Guide
+
+### Installing the package
+
+```bash
+npm install @pyle_of_mail/logger
+```
 
 #### Importing the package
 
@@ -105,14 +135,6 @@ The above example will leave the first 5 characters in clear and then obfuscate 
 ```bash
 my-su**************
 ```
-
-### Logging to a file
-
-The logger will automatically log everything to a text file as well as to the console, as long as the `LOG_FILE` environment variable is defined.
-
-### Logging to a syslog server
-
-Not yet supported, planned for release `1.2.0`.
 
 ## License
 

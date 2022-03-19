@@ -1,6 +1,20 @@
 # Changelog `@pyle_of_mail/logger`
 
-## [v1.1.0](https://github.com/Pyle-of-Mail/logger/releases/tag/v1.0.1) [19-03-2022]
+## [v1.2.0](https://github.com/Pyle-of-Mail/logger/releases/tag/v1.2.0) [19-03-2022]
+
+**🚀 New Features**:
+
+- Added option to prefix messages by a timestamp.
+
+**🔧 Fixes**:
+
+N/A
+
+**🌟 Improvements**:
+
+N/A
+
+## [v1.1.0](https://github.com/Pyle-of-Mail/logger/releases/tag/v1.1.0) [18-03-2022]
 
 **🚀 New Features**:
 
