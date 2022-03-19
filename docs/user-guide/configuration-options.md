@@ -13,16 +13,20 @@ date: 2020-03-19
 
 The log level and is set as an environment variable called `LOG_LEVEL`.
 
+<!-- prettier-ignore-start -->
 !!! note
-The log level **is NOT** case sensitive.
+    The log level **is NOT** case sensitive.
+<!-- prettier-ignore-end -->
 
+<!-- prettier-ignore-start -->
 ??? example
-You can set the log level in a `.env` file and the logger will pick it up thanks to the `dotenv` package:
+    You can set the log level in a `.env` file and the logger will pick it up thanks to the `dotenv` package:
 
     ```bash
     # .env
     LOG_LEVEL = warn
     ```
+<!-- prettier-ignore-end -->
 
 ### Log levels:
 
@@ -37,16 +41,20 @@ You can set the log level in a `.env` file and the logger will pick it up thanks
 
 By defining the `TIMESTAMP` environment variable, the logger will automatically log the messages in the `[{timestamp}] {message}` fomrmat.
 
+<!-- prettier-ignore-start -->
 !!! note
-The timestamp is NOT\*\* case sensitive.
+    The timestamp is NOT\*\* case sensitive.
+<!-- prettier-ignore-end -->
 
+<!-- prettier-ignore-start -->
 ??? example
-You can set the timestamp in a `.env` file and the logger will pick it up thanks to the `dotenv` package:
+    You can set the timestamp in a `.env` file and the logger will pick it up thanks to the `dotenv` package:
 
     ```bash
     # .env
     TIMESTAMP = date
     ```
+<!-- prettier-ignore-end -->
 
 ### Timestamp options
 
@@ -83,5 +91,7 @@ LOG_FILE = /var/log/pyle-of-mail.log
 
 ## Logging to a syslog server
 
+<!-- prettier-ignore-start -->
 !!! warning
-Not yet supported, planned for release `1.3.0`.
+    Not yet supported, planned for release `1.3.0`.
+<!-- prettier-ignore-end -->
