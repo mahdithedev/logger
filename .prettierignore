@@ -1,7 +1,25 @@
+# Ignore npm files
 package.json
 package-lock.json
 node_modules/*
+
+# Ignore environment files
 **/*.env
-LICENSE
-.husky/*
+
+# Ignore .ignore files
 .*ignore
+
+# Ignore log files
+*.log
+
+# Ignore husky directory
+.husky/*
+
+# Ignore LICENSE
+LICENSE
+
+# Ignore image files
+*.png
+*.jpg
+*.jpeg
+*.svg

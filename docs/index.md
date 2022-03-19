@@ -1,8 +1,14 @@
-# `@pyle_of_mail/logger`
+---
+title: Home
+summary: Homepage.
+authors:
+  - Anton Mircea-Pavel
+date: 2020-03-19
+---
 
 ## Description
 
-Minimal and basic logger written in NodeJS.
+Minimal and basic logger written in NodeJS for the Pyle of Mail application.
 
 ## Roadmap
 
@@ -12,7 +18,3 @@ Minimal and basic logger written in NodeJS.
 - [x] Option to prefix all log messages by a timestamp
 - [x] Logging to a file
 - [ ] Logging to an external log server
-
-## License
-
-This code is licensed under the [MIT License](./LICENSE).

@@ -12,7 +12,7 @@ N/A
 
 **🌟 Improvements**:
 
-N/A
+- Added documentation website via mkdocs.
 
 ## [v1.1.0](https://github.com/Pyle-of-Mail/logger/releases/tag/v1.1.0) [18-03-2022]
 

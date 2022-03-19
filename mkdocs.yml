@@ -1,0 +1,45 @@
+# -------------------------------------------------------------------------------------------------
+# Site configuration
+# -------------------------------------------------------------------------------------------------
+site_name: Pyle of Mail Logger
+site_description: Minimal and basic logger written in NodeJS for the Pyle of Mail application.
+site_author: Mircea-Pavel Anton
+# site_favicon:
+# copyright: caca
+theme:
+  name: material
+  palette:
+    scheme: slate
+  # logo: assets/logo.png
+  # favicon: images/favicon.png
+  features:
+    - navigation.expand
+    - toc.follow
+    - navigation.top
+
+# -------------------------------------------------------------------------------------------------
+# Repo configuration
+# -------------------------------------------------------------------------------------------------
+repo_url: https://github.com/Pyle-of-Mail/logger
+repo_name: "GitHub"
+remote_branch: gh-pages
+remote_name: origin
+
+# -------------------------------------------------------------------------------------------------
+# Documentation layout
+# -------------------------------------------------------------------------------------------------
+nav:
+  - "Home": "index.md"
+  - "User Guide":
+      - "user-guide/configuration-options.md"
+      - "user-guide/getting-started.md"
+  - "Changelog": "changelog.md"
+  - "License": "license.md"
+
+markdown_extensions:
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
