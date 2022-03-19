@@ -17,7 +17,7 @@ npm install @pyle_of_mail/logger
 
 ## Importing the package
 
-```node
+```javascript
 import * as Logger from "@pyle_of_mail/logger";
 ```
 
