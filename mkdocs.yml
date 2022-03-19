@@ -5,7 +5,7 @@ site_name: Pyle of Mail Logger
 site_description: Minimal and basic logger written in NodeJS for the Pyle of Mail application.
 site_author: Mircea-Pavel Anton
 # site_favicon:
-# copyright: caca
+# copyright:
 theme:
   name: material
   palette:
